@@ -23,7 +23,7 @@ function userInput() {
 
 // -if user fails to select from the prompt of 4 types of characters they will be alerted with an error
 // -->
-  while ((!confirmLower && !comfirmUpper && !confirmNum && !confirmSym)) {
+  while ((!confirmLower && !confirmUpper && !confirmNum && !confirmSym)) {
     alert("You must select at least one character type!");
 
     confirmLower = confirm("Would you like lowercase letters?");
@@ -70,12 +70,7 @@ function userInput() {
   var passwordText = document.querySelector("#password");
   passwordText.value = password.join("");
   
+  console.log(password.join(""));
 
-// add password to display area
-  document.getElementById("generate").value = password;
 }
 
-
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", userInput);
