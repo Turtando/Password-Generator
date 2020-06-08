@@ -66,7 +66,7 @@ function userInput() {
     }
   };
 
-
+// We write password to the #password input
   var passwordText = document.querySelector("#password");
   passwordText.value = password.join("");
   
