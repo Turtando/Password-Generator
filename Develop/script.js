@@ -10,55 +10,59 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// How can we generate a letter or number randomly?
-String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-const symbols = '~!@#$%^&*"()-_[]{},.\/';
-
 // Generator functions
 // **generate random lower case**
+function userInput() {
+  var length = Number(prompt("Enter a password length(Between 8 & 128 characters)"));
+  while (isNaN(length) || length < 8 || length > 128) length = Number(prompt("Length must be between 8 & 128 characters"));
+}
+var lowerCase = confirm("Would you like lowercase letters?");
+var upperCase = confirm("Would you like uppercase letters?");
+var num = confirm("Would you like numbers?");
+var sym = confirm("Would you like special characters?");
+
+while ((!lowerCase && !upperCase && !num && !sym)) {
+  alert("You must select at least one character type!")
+}
+
 function getRandomLower() {
-  return String.fromCharCode(Math.floor(Math.random() *  26) + 97);
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
 // **generate random upper**
 function getRandomUpper() {
-  return String.fromCharCode(Math.floor(Math.random() *  26) +65);
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
 // **generate random number**
 function getRandomNumber() {
-  return String.fromCharCode(Math.floor(Math.random() *  10) +48);
+  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
 // **generate random symbols**
 function getRandomSymbol() {
-  const symbols = ['~!@#$%^&*"()-_[]{},.\/'];
+  const symbols = ['~!@#$%^&*"()-_[]{},./'];
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
-// generate the random password strung together
-const randomFunc = {
-  lower: getRandomLower(),
-  upper: getRandomUpper(),
-  number: getRandomNumber(),
-  symbol: getRandomSymbol(),
-}
+// Push the characters into one array
+
+
+
 
 
 // Write password to the #password input
 function writePassword() {
-  // var password = generatePassword();
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
+
+
+  // // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
+
+
+  console.log(password);
+
+
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-
-console.log();
-
-
-
 
