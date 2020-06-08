@@ -1,4 +1,5 @@
 var generateBtn = document.querySelector("#generate");
+generateBtn.addEventListener("click", userInput);
 const lower = "abcdefghijklmnopqrstuvwxyz";
 const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const num = '0123456789';
@@ -33,7 +34,7 @@ function userInput() {
   }
 
 
-  // Write password to the #password input
+  // Create #password by gathering user choices data and looping that into into one array 
   let password = []
   let choices = []
   if (confirmLower) {
