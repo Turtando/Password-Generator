@@ -9,7 +9,7 @@ The first step in my process was that I wanted to alert the user as soon as the 
 
 If the user does not input a number in the first prompt, answering how long they would like their password to be, they will be prompted again to enter a correct number. The following prompts, like the password length,  contain of 4 prompts about the user's preferred parameters of the password- if the user does not select uppercase, lowercase, number, or symbol- they are looped to the beginning to enter at least one parameter for their password. 
 
-![](password%20generator%20screencapture%203.jpg)
+![](./Assets/password%20generator%20screencapture%203.jpg)
 
 https://turtando.github.io/Password-Generator/
 https://github.com/Turtando?tab=repositories
