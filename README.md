@@ -22,7 +22,7 @@ Follow the prompt/alert instructions on creating a propper password.
 
 
 # Usage
-
+![](./Assets/03-javascript-homework-demo.png)
 
 
 
